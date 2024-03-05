@@ -13,7 +13,9 @@ Route::group([
     $router->resource('users', UserController::class);
     $router->resource('foods', FoodsController::class);
     $router->resource('food-types', FoodTypeController::class);
+    $router->resource('business-setting', FoodTypeController::class);
     $router->get('/', 'HomeController@index')->name('home');
+    $router->resource('orders', OrderController::class);
 
 
 });

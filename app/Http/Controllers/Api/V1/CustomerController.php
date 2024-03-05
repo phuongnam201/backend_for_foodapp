@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
+use App\CentralLogics\Helpers as CentralLogicsHelpers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -65,7 +66,7 @@ class CustomerController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return response()->json(['errors' => Helpers::error_processor($validator)], 403);
+            return response()->json(['errors' => CentralLogicsHelpers::error_processor($validator)], 403);
         }
         /*$point = new Point($request->latitude,$request->latitude);
         $zone = Zone::contains('coordinates', $point)->first();

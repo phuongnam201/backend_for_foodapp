@@ -36,7 +36,7 @@ class Helpers
     } 
 
     public static function currency_code(){
-        return BusinessSetting::where(['key' => 'currency'])->first()->value();
+        return BusinessSetting::where(['key' => 'currency'])->first()->value;
     }
     
     public static function upload(string $dir, string $format, $image = null){

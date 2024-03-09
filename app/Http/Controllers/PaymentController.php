@@ -24,6 +24,8 @@ class PaymentController extends Controller
         
         if (isset($customer) && isset($order)) {
             $data = [
+                //'order-id' => $order['id'],
+                //'order-mount' => $order['order-mount'],
                 'name' => $customer['f_name'],
                 'email' => $customer['email'],
                 'phone' => $customer['phone'],

@@ -41,7 +41,6 @@ class PaypalPaymentController extends Controller
     {
        
         $order = Order::with(['details'])->where(['id' => session('order_id')])->first();
- 
         $tr_ref = Str::random(6) . '-' . rand(1, 1000);
 
         $payer = new Payer();
@@ -50,7 +49,6 @@ class PaypalPaymentController extends Controller
         $items_array = [];
         $item = new Item();
         $number = sprintf("%0.2f", $order['order_amount']); 
-     
         $item->setName(session('f_name'))
             ->setCurrency(Helpers::currency_code())
             ->setQuantity(1)

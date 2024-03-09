@@ -51,8 +51,22 @@
         @php($order=\App\Models\Order::find(session('order_id')))
         <section class="col-lg-12">
             <div class="checkout_details mt-3">
-                <div class="row">
+                <div class="col">
 
+                <div class="col-md-6 mb-4" style="cursor: pointer">
+                            <div class="card">
+                                <div class="card-body pb-0 pt-1" style="height: 70px">
+                                    <form class="needs-validation" method="POST" id="payment-form"
+                                          action="{{route('vnpay')}}">
+                                        {{ csrf_field() }}
+                                        <button class="btn btn-block" type="submit">
+                                            <img width="100"
+                                                 src="{{asset('assets/admin/img/vnpay.png')}}"/>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>    
 
                     @php($config=\App\CentralLogics\Helpers::get_business_settings('paypal'))
                     @if($config['status'])

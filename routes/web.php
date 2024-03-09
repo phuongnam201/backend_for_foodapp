@@ -24,3 +24,8 @@ use Illuminate\Support\Facades\Route;
     Route::get('paypal-status', 'PaypalPaymentController@getPaymentStatus')->name('paypal-status');
     Route::get('payment-success', 'PaymentController@success')->name('payment-success');
     Route::get('payment-fail', 'PaymentController@fail')->name('payment-fail');
+
+    Route::post('vnpay', 'VNPayController@payWithVnpay')->name('vnpay');
+    Route::get('vnpay_return', 'VNPayController@handleVnpayReturn')->name('vnpay_return');
+    Route::get('payment-status', 'VNPayController@showPaymentResult')->name('payment-status');
+    Route::get('result-payment', 'VNPayController@resultPayment')->name('result-payment');

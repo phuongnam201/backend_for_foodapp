@@ -24,7 +24,8 @@ class OrderController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('user_id', __('User ID'));
         $grid->column('order_amount', __('Order Amount'));
-        $grid->column('payment_status', __('Payment Status'));
+        //$grid->column('payment_status', __('Payment Status'));
+        $grid->model()->where('payment_status', 'paid');
         $grid->column('payment_method', __('Payment Method'));
         $grid->column('order_status', __('Order Status'));
         $grid->column('pending', __('Pending Time'));

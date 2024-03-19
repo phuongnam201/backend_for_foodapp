@@ -12,8 +12,8 @@ class VNPayController extends Controller
 
     $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
     $vnp_Returnurl = route('vnpay_return');
-    $vnp_TmnCode = "MP8ZPI13";//Mã website tại VNPAY 
-    $vnp_HashSecret = "XLETAFXEBDUVXRAPNLQNMWNBMEIHSZUQ"; //Chuỗi bí mật
+    $vnp_TmnCode = env("VNP_TMNCODE");//Mã website tại VNPAY 
+    $vnp_HashSecret = env("BNP_HASHSECRET"); //Chuỗi bí mật
 
     $vnp_TxnRef = $order['id'] + rand(1,10000); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
     $vnp_OrderInfo = "test";
@@ -80,7 +80,7 @@ class VNPayController extends Controller
     }
 
     public function handleVnpayReturn(Request $request) {
-        $vnp_HashSecret = "XLETAFXEBDUVXRAPNLQNMWNBMEIHSZUQ";
+        $vnp_HashSecret = env("BNP_HASHSECRET");;
         $order = Order::with(['details'])->where(['id' => session('order_id')])->first();
     
         $vnp_SecureHash = $_GET['vnp_SecureHash'];

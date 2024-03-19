@@ -66,6 +66,20 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-md-6 mb-4" style="cursor: pointer">
+                            <div class="card">
+                                <div class="card-body pb-0 pt-1" style="height: 70px">
+                                    <form class="needs-validation" method="POST" id="payment-form"
+                                          action="{{route('payos')}}">
+                                        {{ csrf_field() }}
+                                        <button class="btn btn-block" type="submit">
+                                            <img width="100"
+                                                 src="{{asset('assets/admin/img/payos.png')}}"/>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>    
 
                     @php($config=\App\CentralLogics\Helpers::get_business_settings('paypal'))

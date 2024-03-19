@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e8d2e3acc9dc38ad9521f1947a34360",
+    "content-hash": "6650dbc6a7ef969b75f6f95329b8fb41",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3869,6 +3869,50 @@
                 "source": "https://github.com/paragonie/random_compat"
             },
             "time": "2020-10-15T08:29:30+00:00"
+        },
+        {
+            "name": "payos/payos",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/payOSHQ/payos-lib-php.git",
+                "reference": "b930f75a43f55a9805930c531d796c38d0b4a3af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/payOSHQ/payos-lib-php/zipball/b930f75a43f55a9805930c531d796c38d0b4a3af",
+                "reference": "b930f75a43f55a9805930c531d796c38d0b4a3af",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PayOS\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "locbt"
+                }
+            ],
+            "description": "A payOS package for PHP",
+            "keywords": [
+                "payment",
+                "payos",
+                "payos package"
+            ],
+            "support": {
+                "issues": "https://github.com/payOSHQ/payos-lib-php/issues",
+                "source": "https://github.com/payOSHQ/payos-lib-php/tree/v1.0.3"
+            },
+            "time": "2024-01-31T04:05:24+00:00"
         },
         {
             "name": "paypal/rest-api-sdk-php",

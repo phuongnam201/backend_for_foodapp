@@ -16,6 +16,7 @@
         "laravel/passport": "^10.2",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "payos/payos": "^1.0",
         "paypal/rest-api-sdk-php": "*"
     },
     "require-dev": {
